@@ -16,6 +16,9 @@ imagesList = set()
 
 with open('sad face images.txt') as file:
     tmp = file.readlines()
+
+    print(len(tmp))
+
     for value in tmp:
         if(value.startswith('http')):
             imagesList.add(value)
