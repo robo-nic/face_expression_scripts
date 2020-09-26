@@ -3,6 +3,8 @@ from time import time_ns
 
 import os
 
+import threading
+
 
 # as we are dropping images with multiple faces, we can keep the same name (to find for erroneous photos)
 def getFilename(filename):
@@ -27,7 +29,9 @@ class FaceDetection:
         inputImages = os.listdir(inputDirectory)
         for image in inputImages:
             imagePath = inputDirectory + '/' + image
-            FaceDetection.cropToFaces(imagePath, outputDirectory)
+            threading.Thread(target=FaceDetection.cropToFaces,
+                             args=(imagePath, outputDirectory)).start()
+            # FaceDetection.cropToFaces(imagePath, outputDirectory)
 
     """
     this method crops only the images from all the faces in the passed filepath image file
