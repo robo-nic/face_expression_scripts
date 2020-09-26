@@ -3,7 +3,7 @@ import time
 
 ##################
 
-filename = 'sad face images.txt'
+filename = 'sad human face images.txt'
 toSaveAtDirName = 'sad_raw'
 
 # this can be changed, in case some photos are already downloaded,
@@ -14,7 +14,7 @@ startFromIndex = 0
 
 imagesList = set()
 
-with open('sad face images.txt') as file:
+with open(filename) as file:
     tmp = file.readlines()
 
     print(len(tmp))
@@ -26,9 +26,6 @@ with open('sad face images.txt') as file:
 imagesList = list(imagesList)
 
 print('Total images to download:', len(imagesList))
-
-# urllib.request.urlretrieve(
-#     "https://us.123rf.com/450wm/fizkes/fizkes1904/fizkes190400560/120573268-rear-view-pensive-thoughtful-woman-sitting-on-sofa-alone-lost-in-thoughts-upset-female-having-psycho.jpg?ver=6", "local-filename.jpg")
 
 
 def getFileName(dirName):
