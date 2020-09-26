@@ -4,9 +4,9 @@ from time import time_ns
 import os
 
 
-def getUuid(filename):
-    extension = filename.split('.')[-1]
-    return str(time_ns()) + '.' + extension
+# as we are dropping images with multiple faces, we can keep the same name (to find for erroneous photos)
+def getFilename(filename):
+    return filename.split('/')[-1]
 
 
 # for ref check here - https://realpython.com/face-recognition-with-python
@@ -44,7 +44,11 @@ class FaceDetection:
         faces = face_cascade.detectMultiScale(
             img, minNeighbors=4, scaleFactor=1.1, minSize=(30, 30))
 
+        if len(faces) > 1:
+            return
+
         # crop faces form the img and save them to the directory
         for (x, y, w, h) in faces:
+            saveAt = dirPath + '/' + getFilename(image)
             # save the images
-            cv2.imwrite(dirPath + '/' + getUuid(image), img[y:y+h, x:x+w])
+            cv2.imwrite(saveAt, img[y:y+h, x:x+w])
