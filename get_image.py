@@ -6,7 +6,8 @@ import time
 filename = 'surprised human face images.txt'
 toSaveAtDirName = 'surprised_raw'
 
-startFromIndex = 0
+# last stopped at 429
+startFromIndex = 429
 
 imagesList = set()
 
