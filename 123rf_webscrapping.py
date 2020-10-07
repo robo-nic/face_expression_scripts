@@ -8,7 +8,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # USER INPUT DATA
-searchFor = 'sad human face'
+searchFor = 'surprised human face'
 totalImages = 10000
 
 ###################################

@@ -7,8 +7,8 @@ def main():
     and the output directory absolute path 
     """
 
-    inputDirectory = '/home/mr-paul/atmp/aaproject/scripts/sad_raw'
-    outputDirectory = '/home/mr-paul/atmp/aaproject/scripts/sad_faces'
+    inputDirectory = '/home/mr-paul/atmp/aaproject/scripts/surprised_raw'
+    outputDirectory = '/home/mr-paul/atmp/aaproject/scripts/surprised_faces'
 
     # detects all faces from all images in inputDirectory and outputs
     # to outputDirectory

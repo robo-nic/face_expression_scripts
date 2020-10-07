@@ -3,41 +3,10 @@ import time
 
 ##################
 
-filename = 'sad human face images.txt'
-toSaveAtDirName = 'sad_raw'
+filename = 'surprised human face images.txt'
+toSaveAtDirName = 'surprised_raw'
 
-# this can be changed, in case some photos are already downloaded,
-# the index will be printed in the console
-
-# crashed at index: 1105
-# resuming now from: 1106
-
-# crashed at index: 1982
-# resuming now from: 1983
-
-# crashed at index: 2279
-# resuming now from: 2280
-
-# stopped at index: 3124
-# resuming now from: 3124
-
-# 3263
-
-# 5421
-startFromIndex = 5421
-
-# 5801
-startFromIndex = 5802
-
-# 5809
-startFromIndex = 5809
-
-# 6840
-startFromIndex = 6841
-
-# 8945
-startFromIndex = 8946
-##################
+startFromIndex = 0
 
 imagesList = set()
 
